@@ -63,14 +63,25 @@ static String[] pakli = new String[22];
     private static void feltolt() {
         String[] szamok = {"X", "XI", "VIII", "Kiraly", "ász"};
         String[] szinek = {"piros", "zold", "tok", "makk"};
-            int i = 1;
-            for ( String szin : szinek) {
-            pakli[i] = szin+"_"+szinek[i];
-            i++;
+          for (int i = 0; i < pakli.length; i++) {
+            int j = 0;
+            for ( String szin : szamok) {
+            pakli[i] = szin+"_"+szamok[j];
+            j++;
             
             
         
         }
+        }
+        
+       /* for (int i = 1; i < szamok.length; i++) {
+            for (int j = 1; j < szinek.length-1; j++) {
+                pakli[i] =  szamok[i]+"_"+szinek[j];
+                
+            }
+   
+        }*/
+        
         
     }
 
