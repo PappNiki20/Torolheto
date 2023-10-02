@@ -11,9 +11,9 @@ static String[] pakli = new String[22];
     public static void main(String[] args) {
         feltolt();
         for (int i = 0; i < 3; i++) {
-            beker();
-            kever();
             
+            kever();
+            kirak();
         }
         ezvolt();
         
@@ -33,13 +33,31 @@ static String[] pakli = new String[22];
 
     private static void kever() {
         String ujlista[] = new String[22];
-        switch (var) {
-            case val:
-                
+        int b_oszlop = beker();
+        switch (b_oszlop) {
+            case 1:
+                for (int i = 0; i < pakli.length; i++) {
+                    ujlista[1-7] = pakli[20-(i-1)*3];
+                    ujlista[7-14] = pakli[19-(i-1)*3];
+                    ujlista[14-21] = pakli[21-(i-1)*3];
+                }
+                 case 2:
+                for (int i = 0; i < pakli.length; i++) {
+                    ujlista[1-7] = pakli[19-(i-1)*3];
+                    ujlista[7-14] = pakli[20-(i-1)*3];
+                    ujlista[14-21] = pakli[21-(i-1)*3];
+                }
+                  case 3:
+                for (int i = 0; i < pakli.length; i++) {
+                    ujlista[1-7] = pakli[21-(i-1)*3];
+                    ujlista[7-14] = pakli[20-(i-1)*3];
+                    ujlista[14-21] = pakli[19-(i-1)*3];
+                }
                 break;
             default:
                 throw new AssertionError();
         }
+        pakli = ujlista;
     }
 
     private static void feltolt() {
@@ -52,6 +70,12 @@ static String[] pakli = new String[22];
         }
         }
         
+    }
+
+    private static void kirak() {
+        for (int i = 0; i < pakli.length; i++) {
+            System.out.printf("pakli[i]");
+        }
     }
     
 }
