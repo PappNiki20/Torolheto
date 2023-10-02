@@ -2,7 +2,7 @@
 package ujnetbeans;
 
 
-import java.awt.BorderLayout;
+
 import java.util.Scanner;
 
 public class UJNetbeans {
@@ -61,20 +61,22 @@ static String[] pakli = new String[22];
     }
 
     private static void feltolt() {
-        String[] szamok = {"X", "XI", "VIII"};
+        String[] szamok = {"X", "XI", "VIII", "Kiraly", "ász"};
         String[] szinek = {"piros", "zold", "tok", "makk"};
-        for (int i = 1; i < szinek.length; i++) {
-            for (String string : szamok) {
-            pakli[i++] = szamok[i] +"_"+szinek[i];
+            int i = 1;
+            for ( String szin : szinek) {
+            pakli[i] = szin+"_"+szinek[i];
+            i++;
             
-        }
+            
+        
         }
         
     }
 
     private static void kirak() {
         for (int i = 0; i < pakli.length; i++) {
-            System.out.printf("pakli[i]");
+            System.out.printf(pakli[i]);
         }
     }
     
